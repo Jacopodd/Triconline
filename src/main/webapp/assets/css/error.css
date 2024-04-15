@@ -1,0 +1,10 @@
+#empty-message {
+    margin: 30% auto auto;
+    width: 80%;
+    max-width: 400px;
+}
+
+#empty-message h2{
+    font-size: 16px;
+    color: #272559;
+}

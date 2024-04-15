@@ -1,0 +1,136 @@
+drop database if exists triconline;
+create database triconline;
+use triconline;
+
+-- Tabella utente
+CREATE TABLE utente (
+    id INT PRIMARY KEY auto_increment,
+    nome VARCHAR(255) not null,
+    email VARCHAR(255) UNIQUE not null,
+    password VARCHAR(64) not null, -- SHA-256 hashed password
+    isAdmin BOOLEAN not null default false
+);
+
+-- Tabella indirizzi_spedizione_utente
+CREATE TABLE indirizzoSpedizione (
+    id INT PRIMARY KEY auto_increment,
+    idUtente INT not null,
+    via VARCHAR(255) not null,
+    cap char(5) not null,
+    paese varchar(255) not null,
+    numeroTelefono char(10) not null,
+    isDefault BOOLEAN not null,
+    FOREIGN KEY (idUtente) REFERENCES utente(id)
+);
+
+-- Tabella metodi_pagamento_utente
+CREATE TABLE metodoPagamento (
+    id INT PRIMARY KEY auto_increment,
+    idUtente INT not null,
+    proprietario VARCHAR(255) not null,
+    numero_carta VARCHAR(16) not null,
+    data_scadenza DATE not null,
+    cvv VARCHAR(4) not null,
+    isDefault BOOLEAN not null,
+    FOREIGN KEY (idUtente) REFERENCES utente(id)
+);
+
+-- Tabella categoria
+CREATE TABLE categoria (
+    id INT PRIMARY KEY auto_increment,
+    nome VARCHAR(255) not null,
+    descrizione TEXT,
+    immagine VARCHAR(255) -- Possibile path all'immagine
+);
+
+-- Tabella prodotto
+CREATE TABLE prodotto (
+    id INT PRIMARY KEY auto_increment,
+    nome VARCHAR(255) not null,
+    descrizione TEXT not null,
+    prezzo DECIMAL(10, 2) not null,
+    disponibilita INT not null,
+    coupon VARCHAR(255)
+);
+
+-- Tabella immagini
+CREATE TABLE immagini (
+    id INT PRIMARY KEY auto_increment,
+    idProdotto INT not null,
+    path VARCHAR(255) not null, -- Percorso del file immagine
+    FOREIGN KEY (idProdotto) REFERENCES prodotto(id)
+);
+
+-- Tabella categorie_prodotto (per la relazione molti a molti tra prodotto e categoria)
+CREATE TABLE categorie_prodotto (
+    idProdotto INT,
+    idCategoria INT,
+    PRIMARY KEY (idProdotto, idCategoria),
+    FOREIGN KEY (idProdotto) REFERENCES prodotto(id),
+    FOREIGN KEY (idCategoria) REFERENCES categoria(id)
+);
+
+CREATE TABLE recensione (
+	id INT,
+    idProdotto INT,
+    idUtente INT,
+    rating DECIMAL(3, 1) not null,
+    commento TEXT,
+    FOREIGN KEY (idUtente) REFERENCES utente(id),
+    FOREIGN KEY (idProdotto) REFERENCES prodotto(id),
+    primary key (id, idProdotto, idUtente)
+);
+
+-- Tabella recensioni (SE RICHIESTO)
+CREATE TABLE recensioni (
+    id INT PRIMARY KEY,
+    idRecensione INT not null,
+    FOREIGN KEY (idRecensione) REFERENCES recensione(id)
+);
+
+CREATE TABLE prodottoCarrello(
+	idUtente int,
+    idProdotto int,
+    quantita int not null,
+    foreign key (idUtente) references utente(id),
+    foreign key (idProdotto) references prodotto(id),
+    primary key (idUtente, idProdotto)
+);
+
+CREATE TABLE orario(
+	id int auto_increment primary key,
+    inizio varchar(50) not null,
+    fine varchar(50) not null
+);
+
+CREATE TABLE prenotazione(
+	id int primary key auto_increment,
+    idUtente int not null,
+    idOrario int not null,
+    giorno char(10) not null,
+    messaggio text,
+    foreign key (idUtente) references utente(id),
+    foreign key (idOrario) references orario(id)
+);
+
+insert into utente values
+(1, "Dio", "jacopodedominicisdeveloper@gmail.com", "adminJ1!", 1),
+(2, "Jacopo", "jacopodedominiciscuola@gmail.com", "adminJ1!", 0);
+
+insert into indirizzoSpedizione values
+(1, 1, "Vico de Santis 45", "83024", "Monteforte Irpino", "3755761251", 1),
+(2, 2, "Vico de Santis 45", "83024", "Monteforte Irpino", "3755761251", 1);
+
+insert into orario values
+(1, "10:30", "11:00"),
+(2, "11:30", "12:00"),
+(3, "12:30", "13:00");
+
+insert into prenotazione values
+(1, 2, 1, "8/4/2024", "Prenotazione di Prova1"),
+(2, 2, 2, "8/4/2024", "Prenotazione di Prova"),
+(3, 2, 3, "8/4/2024", "Prenotazione di Prova"),
+(4, 2, 3, "1/4/2024", "Prenotazione di Prova"),
+(5, 2, 3, "1/5/2024", "");
+
+

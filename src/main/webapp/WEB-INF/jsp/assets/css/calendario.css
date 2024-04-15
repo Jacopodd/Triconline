@@ -1,0 +1,136 @@
+.table-container {
+    max-width: 100%; /* Utilizza al massimo la larghezza disponibile */
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.header-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-button input[type=submit] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 24px;
+    color: #5a9ca2;
+}
+
+
+.sub-header {
+    display: flex;
+    justify-content: space-around; /*between*/
+    /*align-items: center;*/
+    padding: 10px;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #ccc;
+}
+
+.column-title {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    color: #0a53be;
+}
+
+
+
+/*.table-content {
+    display: flex;
+    padding: 10px;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}*/
+
+
+/*.calendar-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.calendar-title {
+    font-size: 24px;
+}
+
+.calendar-subheader {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.weekday {
+    font-weight: bold;
+}
+
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.calendar-day {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.day-number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.day-info {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}*/

@@ -1,0 +1,54 @@
+.formAuth {
+    height: auto;
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(var(--default-color-rgb), 0.1);
+    border: 2px solid #5a9ca2
+}
+
+.formAuth .loading {
+    display: none;
+    background: var(--background-color);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+}
+
+.formAuth .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid var(--accent-color);
+    border-top-color: var(--background-color);
+    animation: animate-loading 1s linear infinite;
+}
+
+.formAuth button[type=submit] {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border: 0;
+    padding: 8px 30px 10px 30px;
+    transition: 0.4s;
+    border-radius: 0;
+}
+
+.formAuth button[type=submit]:hover {
+    background: rgba(var(--accent-color-rgb), 0.8);
+}
+
+.formAuth .sent-message {
+    display: none;
+    color: #ffffff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.main {
+    margin-top: 5%;
+}
