@@ -43,6 +43,13 @@ CREATE TABLE categoria (
     immagine VARCHAR(255) -- Possibile path all'immagine
 );
 
+CREATE TABLE gruppo (
+	id INT PRIMARY KEY auto_increment,
+    nome VARCHAR(255) not null,
+    idCategoria INT not null,
+	FOREIGN KEY (idCategoria) REFERENCES categoria(id)
+);
+
 -- Tabella prodotto
 CREATE TABLE prodotto (
     id INT PRIMARY KEY auto_increment,
@@ -62,12 +69,12 @@ CREATE TABLE immagini (
 );
 
 -- Tabella categorie_prodotto (per la relazione molti a molti tra prodotto e categoria)
-CREATE TABLE categorie_prodotto (
-    idProdotto INT,
-    idCategoria INT,
-    PRIMARY KEY (idProdotto, idCategoria),
+CREATE TABLE gruppo_prodotto (
+    idProdotto INT not null,
+    idGruppo INT not null,
+    PRIMARY KEY (idProdotto, idGruppo),
     FOREIGN KEY (idProdotto) REFERENCES prodotto(id),
-    FOREIGN KEY (idCategoria) REFERENCES categoria(id)
+    FOREIGN KEY (idGruppo) REFERENCES gruppo(id)
 );
 
 CREATE TABLE recensione (
@@ -133,4 +140,77 @@ insert into prenotazione values
 (4, 2, 3, "1/4/2024", "Prenotazione di Prova"),
 (5, 2, 3, "1/5/2024", "");
 
+
+insert into prodotto values
+#Linea Anticaduta
+####Shampoo
+(1, "Seren H Uomo", "Shampoo Linea Anticaduta Uomo", "20", 100, null),
+(2, "Seren H Donna", "Shampoo Linea Anticaduta Donna", "20", 100, null),
+####Lozione
+(3, "Seren H Uomo", "Lozione Linea Anticaduta Uomo", "50", 100, null),
+(4, "Seren H Donna", "Lozione Linea Anticaduta Donna", "50", 100, null),
+(5, "Tricoattivo H", "Lozione Linea Anticaduta Unisex", "50", 100, null),
+
+#Linea Ristrutturante
+####Shampoo
+(6, "Bioton", "Shampoo Linea Ristrutturante", "16", 100, null),
+(7, "Pappa Reale", "Shampoo Linea Ristrutturante", "16", 100, null),
+(8, "Lenitivo", "Shampoo Linea Ristrutturante", "18", 100, null),
+#Pre/Post Lavaggio
+(9, "Equaderm", "Pre/Post Lavaggio Linea Ristrutturante", "28", 100, null),
+(10, "Uniqo", "Pre/Post Lavaggio Linea Ristrutturante", "16", 100, null),
+(11, "Tricoil", "Pre/Post Lavaggio Linea Ristrutturante", "20", 100, null),
+
+#Linea Estiva
+####Uomo
+(12, "Shampoo Fresh", "Shampoo Linea Estiva Uomo", "18", 100, null),
+(13, "Lozione Tonico Fresh", "Lozione Linea Estiva Uomo", "32", 100, null),
+####Donna
+(14, "Shampoo Solare", "Shampoo Linea Estiva Donna", "18", 100, null),
+(15, "Maschera Solare", "Maschera Linea Estiva Donna", "20", 100, null),
+(16, "Spary Solare", "Spray Linea Estiva Donna", "20", 100, null);
+
+
+insert into categoria values
+(1, "Best Seller", null, null),
+(2, "Linea Anticaduta", null, null),
+(3, "Linea Ristrutturante", null, null),
+(4, "Linea Estiva", null, null);
+
+insert into gruppo values
+(1, "Shampoo", 2),
+(2, "Lozioni", 2),
+(3, "Shampoo", 3),
+(4, "Pre e Post Lavaggio", 3),
+(5, "Uomo", 4),
+(6, "Donna", 4);
+
+insert into gruppo_prodotto values
+#SHAMPOO ANTICADUTA
+(1, 1),
+(2, 1),
+
+#LOZIONI ANTICADUTA
+(3, 2),
+(4, 2),
+(5, 2),
+
+#SHAMPOO RISTRUTTURANTE
+(6, 3),
+(7, 3),
+(8, 3),
+
+#PRE POST LAVAGGIO RISTRUTTURANTE
+(9, 4),
+(10, 4),
+(11, 4),
+
+#UOMO ESTIVO
+(12, 5),
+(13, 5),
+
+#DONNA ESTIVO
+(14, 6),
+(15, 6),
+(16, 6);
 
