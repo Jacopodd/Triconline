@@ -122,8 +122,8 @@ CREATE TABLE prenotazione(
 );
 
 insert into utente values
-(1, "Dio", "jacopodedominicisdeveloper@gmail.com", "adminJ1!", 1),
-(2, "Jacopo", "jacopodedominiciscuola@gmail.com", "adminJ1!", 0);
+(1, "Dio", "jacopodedominicisdeveloper@gmail.com", "VNhDEpb1yYlReJnOLMlqwg==", 1),
+(2, "Jacopo", "jacopodedominiciscuola@gmail.com", "VNhDEpb1yYlReJnOLMlqwg==", 0);
 
 insert into indirizzoSpedizione values
 (1, 1, "Vico de Santis 45", "83024", "Monteforte Irpino", "3755761251", 1),
