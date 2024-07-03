@@ -97,12 +97,12 @@ CREATE TABLE recensioni (
 );
 
 CREATE TABLE prodottoCarrello(
+	id int primary key auto_increment,
 	idUtente int,
     idProdotto int,
     quantita int not null,
     foreign key (idUtente) references utente(id),
-    foreign key (idProdotto) references prodotto(id),
-    primary key (idUtente, idProdotto)
+    foreign key (idProdotto) references prodotto(id)
 );
 
 CREATE TABLE orario(
@@ -119,6 +119,11 @@ CREATE TABLE prenotazione(
     messaggio text,
     foreign key (idUtente) references utente(id),
     foreign key (idOrario) references orario(id)
+);
+
+CREATE TABLE countVisite(
+	id int primary key auto_increment,
+    count int not null
 );
 
 insert into utente values
@@ -152,15 +157,15 @@ insert into gruppo values
 (1, "Shampoo", 2),
 (2, "Lozioni", 2),
 (3, "Shampoo", 3),
-(4, "Pre e Post Lavaggio", 3),
+(4, "Finish", 3),
 (5, "Uomo", 4),
 (6, "Donna", 4);
 
 insert into prodotto values
 #Linea Anticaduta
 ####Shampoo
-(1, "Seren H Uomo", "Shampoo Linea Anticaduta Uomo", "20", 1, 100, null),
-(2, "Seren H Donna", "Shampoo Linea Anticaduta Donna", "20", 1, 100, null),
+(1, "Seren H Uomo", "Shampoo alle cellule staminali vegetali, specifico per l’uomo.", "20", 1, 100, null),
+(2, "Seren H Donna", "Shampoo coaudiuvante della prevenzione della caduta dei capelli.", "20", 1, 100, null),
 ####Lozione
 (3, "Seren H Uomo", "Lozione Linea Anticaduta Uomo", "50", 2, 100, null),
 (4, "Seren H Donna", "Lozione Linea Anticaduta Donna", "50", 2, 100, null),
