@@ -186,10 +186,27 @@ Lo shampo Triconline Seren H per l’uomo contiene:<br>
 <li><b>Polyquaternium-6</b>: filmogeno, riduce l’elettrostaticità, fornisce un’eccellente azione condizionante, favorisce l’aumento del diametro dello stelo del capello.</li>
 <li><b>Olio essenziale di Melaleuca</b>: antifungina e antibatterica.</li>
 </ul>
-
 ",
  "20", 1, 100, null),
-(2, "Seren H Donna", "Shampoo coaudiuvante della prevenzione della caduta dei capelli.", "20", 1, 100, null),
+(2, "Seren H Donna",
+ "
+ Coadiuvante nella prevenzione della caduta dei capelli con azione detossinante e riequilibrante. Esercita un’azione ristrutturante e fortificante.<br>
+ <h4>Principi Attivi</h4>
+ Lo shampo Triconline Seren H per la donna contiene:<br>
+ <ul>
+ <li><b>Keratina Idrolizzata</b>: azione fortificante e restitutiva anche su capelli decolorati e/o colorati chimicamente.</li>
+ <li><b>Auxina Tricogena</b>: effetto trico-stimolante in accordo con le fasi bulbari anagen, catagen e telogen.</li>
+ <li><b>Estratto di Salvia</b>: dermopurificante, disinfettante, antisudorale ed astringente, evita l’untuosità in eccesso.</li>
+ <li><b>Estratto di Ippocastano</b>:  vaso-protettore, antinfiammatorio, migliora il microcircolo.</li>
+ <li><b>Caffeina</b>: stimolante per la circolazione.</li>
+ <li><b>Biotina</b>: Vit. H, rinforza la corteccia capillare stimolando la crescita dei capelli sani e forti.</li>
+ <li><b>Estratto Serenoa Repens</b>:  promuove la sintesi di proteine con conseguente ricrescita ed incremento del trofismo cutaneo.</li>
+ <li><b>Cellule Staminali della Quercia Marina 1.5%</b>: ritardano l’invecchiamento del follicolo pilifero esercitando un’azione di ringiovanimento cellulare, anti-infiammatoria, anti- pruriginosa, antiossidante.</li>
+ <li><b>Polyquaternium-6</b>: filmogeno, agevola la pettinabilità, riduce l’elettrostaticità, fornisce un’eccellente azione condizionante, favorisce l’aumento del diametro dello stelo del capello.</li>
+ <li><b>Olio essenziale di Melaleuca</b>: antifungina e antibatterica.</li>
+ </ul>
+ ",
+ "20", 1, 100, null),
 ####Lozione
 (3, "Seren H Uomo", "Lozione Linea Anticaduta Uomo", "50", 2, 100, null),
 (4, "Seren H Donna", "Lozione Linea Anticaduta Donna", "50", 2, 100, null),
@@ -225,17 +242,35 @@ insert into informazioniProdotto values
 <li>Applicare una seconda dose massaggiando, delicatamente, il cuoio capelluto.</li>
 <li>Utilizare due volte alla settimana insieme alla lozione Triconline Uomo, per risultati ancor più efficaci.</li>
 </ul>
-<b>Formato</b>: 300ml<br>
-<h4>Conservazione</h4><br>
+<b>Formato</b>: 300ml<br><br>
+<h4>Conservazione</h4>
 Si prega di conservare in locali asciutti e ben aerati, a temperatura ambiente (compresa tra 5°C e 40°C), lontano da fiamme, sorgenti di calore o apparecchi elettrici in funzione.<br>
 Validità a confezione integra: 36 mesi.<br>
-Validità dopo la prima apertura: 6 mesi.<br>
+Validità dopo la prima apertura: 6 mesi.<br><br>
 <h4>Avvertenze</h4>
 Per uso esterno. Tenere fuori dalla portata dei bambini. In caso di contatto con gli occhi: togliere le eventuali lenti a contatto se utilizzate esSciacquare accuratamente ed abbondantemente con acqua. In caso di persistente irritazione consultare il medico.
 In caso di ingestione: consultare il Centro Antiveleni più vicino. Non provocare il vomito.
 In caso di inalazione massiccia: può risultare irritante per le prime vie respiratorie; portare il soggetto all’aria aperta in caso di ambienti poco aerati e particolarmente saturi di vapore acqueo. Per sintomi persistenti di irritazione delle prime vie aeree, consultare un medico
+"),
+
+(2, 2, 
 "
-);
+<h4>Modalità d'uso</h4>
+<ul>
+<li>Applicare una prima dose di detergente sui capelli bagnati, lasciando agire per qualche minuto. Successivamente, risciacquare abbondantemente.</li>
+<li>Applicare una seconda dose massaggiando, delicatamente, il cuoio capelluto.</li>
+<li>Utilizare due volte alla settimana insieme alla lozione Triconline Uomo, per risultati ancor più efficaci.</li>
+</ul>
+<b>Formato</b>: 300ml<br><br>
+<h4>Conservazione</h4>
+Si prega di conservare in locali asciutti e ben aerati, a temperatura ambiente (compresa tra 5°C e 40°C), lontano da fiamme, sorgenti di calore o apparecchi elettrici in funzione.<br>
+Validità a confezione integra: 36 mesi.<br>
+Validità dopo la prima apertura: 6 mesi.<br><br>
+<h4>Avvertenze</h4>
+Per uso esterno. Tenere fuori dalla portata dei bambini. In caso di contatto con gli occhi: togliere le eventuali lenti a contatto se utilizzate esSciacquare accuratamente ed abbondantemente con acqua. In caso di persistente irritazione consultare il medico.
+In caso di ingestione: consultare il Centro Antiveleni più vicino. Non provocare il vomito.
+In caso di inalazione massiccia: può risultare irritante per le prime vie respiratorie; portare il soggetto all’aria aperta in caso di ambienti poco aerati e particolarmente saturi di vapore acqueo. Per sintomi persistenti di irritazione delle prime vie aeree, consultare un medico
+");
 
 
 insert into gruppo_prodotto values
