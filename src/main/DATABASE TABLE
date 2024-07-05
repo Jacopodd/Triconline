@@ -61,6 +61,13 @@ CREATE TABLE prodotto (
     FOREIGN KEY (idGruppo) REFERENCES gruppo(id)
 );
 
+CREATE TABLE informazioniProdotto(
+	id INT PRIMARY KEY auto_increment,
+    idProdotto int not null,
+    descrzione TEXT not null,
+    FOREIGN KEY (idProdotto) REFERENCES prodotto(id)
+);
+
 -- Tabella immagini
 CREATE TABLE immagini (
     id INT PRIMARY KEY auto_increment,
@@ -164,7 +171,24 @@ insert into gruppo values
 insert into prodotto values
 #Linea Anticaduta
 ####Shampoo
-(1, "Seren H Uomo", "Shampoo alle cellule staminali vegetali, specifico per l’uomo.", "20", 1, 100, null),
+(1, "Seren H Uomo", 
+"
+Shamppo Triconline Seren H, trattamento specifico per l’uomo.
+Una strategica associazione di emulsionanti e surfattanti, compone una formula fin da subito efficace: infatti è un prodotto coadiuvante per la prevenzione della caduta dei capelli e svolge un’azione detossinante, riequilibrante, ristrutturante e fortificante.
+E’ un articolo speficicatamente detergente con azione detossinante, formulato per ripristinare lo stato fisiologico della cute e dei capelli prima del trattamento con la Lozione Triconline. Purifica la cute grazie alla presenza del Tea Tree Oil antibatterico.
+La presenza di cellule staminali vegetali ritarda l’invecchiamento del follicolo con un’azione di ringiovanimento cellulare. L’estratto di Serenoa promuove la sintesi di proteine rinforzando la fibra capillare, mentre la Biotina stimola la crescita di capelli sani.<br><br>
+<b>Principi Attivi</b><br>
+Lo shampo Triconline Seren H per l’uomo contiene:<br>
+<ul>
+<li><b>Biotina</b>: Vit. H, rinforza la corteccia capillare stimolando la crescita dei capelli sani e forti.</li>
+<li><b>Estratto Serenoa Repens</b>: promuove la sintesi delle proteine con conseguente ricrescita ed incremento del trofismo cutaneo.</li>
+<li><b>Cellule Staminali della Quercia Marina 1.5%</b>: ritardano l’invecchiamento della papilla pilifera esercitando un’azione di ringiovanimento cellulare, anti-infiammatoria, anti- pruriginosa, antiossidante.</li>
+<li><b>Polyquaternium-6</b>: filmogeno, riduce l’elettrostaticità, fornisce un’eccellente azione condizionante, favorisce l’aumento del diametro dello stelo del capello.</li>
+<li><b>Olio essenziale di Melaleuca</b>: antifungina e antibatterica.</li>
+</ul>
+
+",
+ "20", 1, 100, null),
 (2, "Seren H Donna", "Shampoo coaudiuvante della prevenzione della caduta dei capelli.", "20", 1, 100, null),
 ####Lozione
 (3, "Seren H Uomo", "Lozione Linea Anticaduta Uomo", "50", 2, 100, null),
@@ -189,6 +213,30 @@ insert into prodotto values
 (14, "Shampoo Solare", "Shampoo Linea Estiva Donna", "18", 6, 100, null),
 (15, "Maschera Solare", "Maschera Linea Estiva Donna", "20", 6, 100, null),
 (16, "Spary Solare", "Spray Linea Estiva Donna", "20", 6, 100, null);
+
+
+insert into informazioniProdotto values
+#Seren H Uomo SHAMPOO
+(1, 1,
+"
+<h4>Modalità d'uso</h4>
+<ul>
+<li>Applicare una prima dose di detergente sui capelli bagnati, lasciando agire per qualche minuto. Successivamente, risciacquare abbondantemente.</li>
+<li>Applicare una seconda dose massaggiando, delicatamente, il cuoio capelluto.</li>
+<li>Utilizare due volte alla settimana insieme alla lozione Triconline Uomo, per risultati ancor più efficaci.</li>
+</ul>
+<b>Formato</b>: 300ml<br>
+<h4>Conservazione</h4><br>
+Si prega di conservare in locali asciutti e ben aerati, a temperatura ambiente (compresa tra 5°C e 40°C), lontano da fiamme, sorgenti di calore o apparecchi elettrici in funzione.<br>
+Validità a confezione integra: 36 mesi.<br>
+Validità dopo la prima apertura: 6 mesi.<br>
+<h4>Avvertenze</h4>
+Per uso esterno. Tenere fuori dalla portata dei bambini. In caso di contatto con gli occhi: togliere le eventuali lenti a contatto se utilizzate esSciacquare accuratamente ed abbondantemente con acqua. In caso di persistente irritazione consultare il medico.
+In caso di ingestione: consultare il Centro Antiveleni più vicino. Non provocare il vomito.
+In caso di inalazione massiccia: può risultare irritante per le prime vie respiratorie; portare il soggetto all’aria aperta in caso di ambienti poco aerati e particolarmente saturi di vapore acqueo. Per sintomi persistenti di irritazione delle prime vie aeree, consultare un medico
+"
+);
+
 
 insert into gruppo_prodotto values
 #SHAMPOO ANTICADUTA
