@@ -207,15 +207,29 @@ Lo shampo Triconline Seren H per l’uomo contiene:<br>
  </ul>
  ",
  "20", 1, 100, null),
-####Lozione
+####Lozione DA CHIEDERE AD ARK
 (3, "Seren H Uomo", "Lozione Linea Anticaduta Uomo", "50", 2, 100, null),
 (4, "Seren H Donna", "Lozione Linea Anticaduta Donna", "50", 2, 100, null),
 (5, "Tricoattivo H", "Lozione Linea Anticaduta Unisex", "50", 2, 100, null),
 
 #Linea Ristrutturante
 ####Shampoo
-(6, "Bioton", "Shampoo Linea Ristrutturante", "16", 3, 100, null),
-(7, "Pappa Reale", "Shampoo Linea Ristrutturante", "16", 3, 100, null),
+(6, "Bioton",
+ "
+ Lo shampoo Bio-Ton contiene emulsionanti e surfattanti.<br>
+ <b>L’Ortica</b>, nota e apprezzata per le sue proprietà seboregolatrici, esercita un’azione riequilibrante sui capelli grassi. La formula, con estratto naturale di Ortica, dona freschezza e volume ai capelli grassi, rinforzandoli dalle radici alle punte. Grazie ai suoi estratti naturali previene la formazione di forfora e l’eccessiva sedimentazione di sebo, ripristinando il pH ottimale. Inoltre, l’azione purificante di Salvia, Timo e Tea Tree Oil apporta un benefico effetto sulla consistenza e sull’aspetto della capigliatura
+ ",
+ "16", 3, 100, null),
+(7, "Pappa Reale", 
+"
+dai laboratori di Ricerca Farmavit uno shampoo alla pappa reale per i capelli aridi e sfibrati, inariditi, sciupati e spenti. Uno shampoo con formulazioni e fito-complessi del tutto esclusivi e inediti.
+Un alimento altamente proteico, che le api ottengono dalla trasformazione del polline e che utilizzano per favorire il longevo benessere delle strutture del loro corpo. L’intenso, specifico nutrimento che i capelli aridi realmente aspettavano!
+
+Sono molteplici le cause che possono danneggiare il naturale splendore dei capelli, rendendoli inariditi, sciupati, spenti: gli agenti atmosferici, l’azione dei raggi solari, l’uso del phon e di tinture aggressive. Le chiome risultano così sfibrate e indebolite, dapprima in superficie e successivamente anche nella loro struttura. Ma ecco che ancora una volta ci viene incontro la Natura, con un nutriente molto più che pregiato, addirittura “regale”: la Pappa Reale.
+
+È questo un alimento altamente proteico, che le api ottengono dalla trasformazione del polline e che utilizzano per favorire il longevo benessere delle strutture del loro corpo. Le api nutrici lo riservano alle larve, che vengono così alimentate per i primi giorni di vita. La Pappa Reale è altresì il nutrimento destinato all’ape regina per tutta la sua esistenza: grazie al suo contenuto d’eccezione in fatto di aminoacidi essenziali, proteine, carboidrati, minerali, lipidi, oligoelementi e vitamine rende possibile all’ape più “nobile” dell’alveare di vivere dai 3 ai 5 anni. Si capisce quindi perché la vita di un’ape operaia, invece, non superi i 30 o 40 giorni. Appare evidente che la Pappa Reale rappresenti un mirabile ricostituente naturale, a partire dal quale i Laboratori di Ricerca Farmavit hanno progettato e creato lo shampoo per i capelli aridi e sfibrati, sviluppando formulazioni e fito-complessi del tutto esclusivi e inediti. Come nel caso degli Aminoacidi da Pappa Reale, che vantano un eccellente potere ristrutturante, o una base tensioattiva di origine vegetale da Pappa Reale, Olivo e Cocco, che consente allo Shampoo di detergere con cura e al contempo di proteggere e nutrire i capelli. Innovativo ed esclusivo è ancora il Complesso Ristrutturante da Miele di Castagno, Pappa Reale, Fiori d’Ibisco, d’Arancio amaro e d’Arancio dolce, dalle doti antiossidanti e restitutive. Grazie a specialità formulate effettivamente in base alle loro esigenze, finalmente i capelli più secchi e provati potranno far mostra di un aspetto più vitale, resistente, morbido e brillante, riscoprendo un reale e naturale benessere!
+",
+ "16", 3, 100, null),
 (8, "Lenitivo", "Shampoo Linea Ristrutturante", "18", 3, 100, null),
 #Pre/Post Lavaggio
 (9, "Equaderm", "Pre/Post Lavaggio Linea Ristrutturante", "28", 4, 100, null),
@@ -270,7 +284,33 @@ Validità dopo la prima apertura: 6 mesi.<br><br>
 Per uso esterno. Tenere fuori dalla portata dei bambini. In caso di contatto con gli occhi: togliere le eventuali lenti a contatto se utilizzate esSciacquare accuratamente ed abbondantemente con acqua. In caso di persistente irritazione consultare il medico.
 In caso di ingestione: consultare il Centro Antiveleni più vicino. Non provocare il vomito.
 In caso di inalazione massiccia: può risultare irritante per le prime vie respiratorie; portare il soggetto all’aria aperta in caso di ambienti poco aerati e particolarmente saturi di vapore acqueo. Per sintomi persistenti di irritazione delle prime vie aeree, consultare un medico
+"),
+
+(3, 3,
+"
+DA INSERIRE
+"),
+(4, 4,
+"
+DA INSERIRE
+"),
+(5, 5,
+"
+DA INSERIRE
+"),
+
+(6, 6, 
+"
+<h4>Modalità d'uso:</h4>
+Applicare una piccola quantità di prodotto sui capelli umidi, massaggiare per qualche minuto e risciacquare abbondantemente. Ripetere una seconda volta l’operazione
+"),
+
+(7, 7,
+"
+DA INSERIRE
 ");
+
+
 
 
 insert into gruppo_prodotto values
