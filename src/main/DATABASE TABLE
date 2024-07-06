@@ -69,10 +69,10 @@ CREATE TABLE informazioniProdotto(
 );
 
 -- Tabella immagini
-CREATE TABLE immagini (
+CREATE TABLE immagine (
     id INT PRIMARY KEY auto_increment,
     idProdotto INT not null,
-    path VARCHAR(255) not null, -- Percorso del file immagine
+    imgPath VARCHAR(255) not null, -- Percorso del file immagine
     FOREIGN KEY (idProdotto) REFERENCES prodotto(id)
 );
 
@@ -342,3 +342,20 @@ insert into gruppo_prodotto values
 (15, 6),
 (16, 6);
 
+insert into immagine values
+(1, 1, "assets/img/prodotti/serenH_uomo_shampoo.jpg"),
+(2, 2, "assets/img/prodotti/serenH_donna_shampoo.jpg"),
+(3, 3, "assets/img/prodotti/serenH_uomo_lozione.jpg"),
+(4, 4, "assets/img/prodotti/serenH_donna_lozione.jpg"),
+(5, 5, "assets/img/prodotti/tricoattivo_h.jpg"),
+(6, 6, "assets/img/prodotti/bioton.jpg"),
+(7, 7, "assets/img/prodotti/pappa_reale.jpg"), 
+(8, 8, "assets/img/AlessiaSlide1.jpg"), #lenitivo
+(9, 9, "assets/img/prodotti/equaderm.jpg"),
+(10, 10, "assets/img/AlessiaSlide1.jpg"), #uniqo
+(11, 11, "assets/img/AlessiaSlide1.jpg"), #tricoil
+(12, 12, "assets/img/AlessiaSlide1.jpg"), #shampoo fresh
+(13, 13, "assets/img/AlessiaSlide1.jpg"), #lozione tonico fresh 
+(14, 14, "assets/img/prodotti/shampoo_solare.jpg"),
+(15, 15, "assets/img/prodotti/maschera_solare.jpg"),
+(16, 16, "assets/img/prodotti/spray_solare.jpg");
